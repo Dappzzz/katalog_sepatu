@@ -6,7 +6,7 @@ class SepatuSport extends Sepatu
     private $teknologi;
     private $beratGram;
 
-    // Konstruktor Level 3A
+
     public function __construct(
         $id,
         $nama,
@@ -27,7 +27,7 @@ class SepatuSport extends Sepatu
         $this->beratGram     = $beratGram;
     }
 
-    // Override tampilInfo() dari Sepatu
+
     public function tampilInfo()
     {
         echo "===== SEPATU SPORT =====\n";
@@ -38,16 +38,15 @@ class SepatuSport extends Sepatu
         echo "Kategori       : " . $this->getKategori() . "\n";
     }
 
-    // Override getKategori()
     public function getKategori()
     {
         return "Sepatu Sport - " . $this->jenisOlahraga;
     }
 
-    // Override hitungDiskon() - Sport dapat diskon lebih besar
+
     public function hitungDiskon($persen)
     {
-        // Sport mendapat bonus diskon tambahan 5%
+
         $totalDiskon = $persen + 5;
         $hargaDiskon = $this->harga - ($this->harga * $totalDiskon / 100);
         return $hargaDiskon;

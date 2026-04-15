@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "risyadmaulanadaffa";
 $pass = "12345";
-$db   = "db_apksepatu"; // Sesuaikan jika nama database berbeda
+$db   = "db_apksepatu"; 
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 if (!$conn) {

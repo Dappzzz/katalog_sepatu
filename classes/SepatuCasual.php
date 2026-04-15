@@ -4,9 +4,9 @@ class SepatuCasual extends Sepatu
 {
     private $gaya;
     private $material;
-    private $edisiTerbatas; // bool
+    private $edisiTerbatas; 
 
-    // Konstruktor Level 3C
+
     public function __construct(
         $id,
         $nama,
@@ -27,7 +27,7 @@ class SepatuCasual extends Sepatu
         $this->edisiTerbatas = $edisiTerbatas;
     }
 
-    // Override tampilInfo() dari Sepatu
+
     public function tampilInfo()
     {
         echo "===== SEPATU CASUAL =====\n";
@@ -38,14 +38,14 @@ class SepatuCasual extends Sepatu
         echo "Kategori       : " . $this->getKategori() . "\n";
     }
 
-    // Override getKategori()
+
     public function getKategori()
     {
         $label = $this->edisiTerbatas ? "Sepatu Casual (Limited Edition)" : "Sepatu Casual";
         return $label;
     }
 
-    // Override hitungDiskon() - Limited edition tidak boleh diskon
+
     public function hitungDiskon($persen)
     {
         if ($this->edisiTerbatas) {

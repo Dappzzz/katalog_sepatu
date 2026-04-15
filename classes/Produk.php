@@ -1,5 +1,5 @@
 <?php
-class Produk   // ... (masukkan seluruh isi class Produk di sini, mulai dari properti id sampai method getId) ..
+class Produk   
 {
     protected $id;
     protected $nama;
@@ -7,7 +7,7 @@ class Produk   // ... (masukkan seluruh isi class Produk di sini, mulai dari pro
     protected $deskripsi;
     protected $stok;
 
-    // Konstruktor Level 1
+
     public function __construct($id, $nama, $harga, $deskripsi, $stok)
     {
         $this->id        = $id;
@@ -17,7 +17,7 @@ class Produk   // ... (masukkan seluruh isi class Produk di sini, mulai dari pro
         $this->stok      = $stok;
     }
 
-    // Method yang akan di-override
+
     public function tampilInfo()
     {
         echo "===== INFORMASI PRODUK =====\n";

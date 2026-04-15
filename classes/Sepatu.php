@@ -5,9 +5,8 @@ class Sepatu extends Produk
     protected $ukuran;
     protected $warna;
     protected $merek;
-    protected $gender; // Pria / Wanita / Unisex
+    protected $gender;
 
-    // Konstruktor Level 2 - memanggil parent::__construct()
     public function __construct($id, $nama, $harga, $deskripsi, $stok, $ukuran, $warna, $merek, $gender)
     {
         parent::__construct($id, $nama, $harga, $deskripsi, $stok);
@@ -17,7 +16,7 @@ class Sepatu extends Produk
         $this->gender = $gender;
     }
 
-    // Override method tampilInfo() dari Produk
+
     public function tampilInfo()
     {
         parent::tampilInfo();
@@ -27,27 +26,32 @@ class Sepatu extends Produk
         echo "Gender      : " . $this->gender . "\n";
     }
 
-    // Override getKategori()
+
     public function getKategori()
     {
         return "Sepatu";
     }
 
-    // Override hitungDiskon() - tambah logika khusus sepatu
+
     public function hitungDiskon($persen)
     {
         $hargaDiskon = parent::hitungDiskon($persen);
-        // Sepatu mendapat cashback Rp 10.000 setiap pembelian
+
         return $hargaDiskon - 10000;
     }
 
-    public function getMerek()
+    public function getWarna()
     {
-        return $this->merek;
+        return $this->warna;
     }
 
     public function getUkuran()
     {
         return $this->ukuran;
+    }
+
+    public function getMerek()
+    {
+        return $this->merek;
     }
 }

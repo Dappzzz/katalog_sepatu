@@ -3,10 +3,10 @@ require_once 'Sepatu.php';
 class SepatuFormal extends Sepatu
 {
     private $bahan;
-    private $tinggiHak; // dalam cm
-    private $sertifikasi; // misal: SNI, ISO
+    private $tinggiHak; 
+    private $sertifikasi;
 
-    // Konstruktor Level 3B
+
     public function __construct(
         $id,
         $nama,
@@ -27,7 +27,7 @@ class SepatuFormal extends Sepatu
         $this->sertifikasi  = $sertifikasi;
     }
 
-    // Override tampilInfo() dari Sepatu
+
     public function tampilInfo()
     {
         echo "===== SEPATU FORMAL =====\n";
@@ -38,16 +38,16 @@ class SepatuFormal extends Sepatu
         echo "Kategori       : " . $this->getKategori() . "\n";
     }
 
-    // Override getKategori()
+
     public function getKategori()
     {
         return "Sepatu Formal";
     }
 
-    // Override hitungDiskon() - Formal tidak dapat cashback, tapi ada cicilan 0%
+
     public function hitungDiskon($persen)
     {
-        // Formal menggunakan diskon standar tanpa cashback tambahan
+
         return $this->harga - ($this->harga * $persen / 100);
     }
 
